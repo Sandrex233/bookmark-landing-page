@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 
 import Logo from '../assets/logo-bookmark.svg'
 import { FaBars, FaTimes } from 'react-icons/fa';
+import Facebook from '../assets/icon-facebook.svg'
+import Twitter from '../assets/icon-twitter.svg'
+import logowhite from '../assets/logo-white.svg'
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
@@ -25,17 +28,26 @@ const Navbar = () => {
                 rounded-lg md:block'>Login</button>
                 </div>
 
-                <ul className={!nav
-                    ? 'hidden'
-                    : 'absolute top-0 left-0 w-full h-screen bg-black text-white text-5xl pl-20 font-extralight flex flex-col justify-center items-start'}>
 
+                <ul
+                    className={nav
+                        ? 'md:hidden uppercase fixed left-0 top-0 flex flex-col space-y-6 items-center justify-center w-full h-screen bg-[#252B46] opacity-95 tracking-widest ease-in duration-300 z-10'
+                        : 'hidden'}
+                >
+                    <img src={logowhite} alt="" className='fixed top-0 left-0 p-6 pl-10' />
+                    <div className='border border-gray-700 w-2/4'></div>
                     <li onClick={handleClick} className='text-white text-lg cursor-pointer'>Features</li>
+                    <div className='border border-gray-700 w-2/4'></div>
                     <li onClick={handleClick} className='text-white text-lg cursor-pointer'>Pricing</li>
-                    <li onClick={handleClick} className='text-white text-lg cursor-pointer'>Resources</li>
-                    <div className='border border-gray-300 w-2/4'></div>
-                    <li onClick={handleClick} className='text-white text-lg cursor-pointer'>Login</li>
-                    <a href='/' className='md:hidden p-3 px-16 transition ease-in-out text-base text-white bg-[#2ACFCF]
-                rounded-full font-medium block'>Sign Up</a>
+                    <div className='border border-gray-700 w-2/4'></div>
+                    <li onClick={handleClick} className='text-white text-lg cursor-pointer'>Contact</li>
+                    <div className='border border-gray-700 w-2/4'></div>
+                    <a href='/' className='md:hidden p-2 px-20 transition ease-in-out text-base text-white border-gray-200 border-2
+                rounded-md font-medium block'>LogIn</a>
+                    <div className='flex space-x-5 pt-28'>
+                        <img src={Facebook} alt="" onClick={handleClick} />
+                        <img src={Twitter} alt="" onClick={handleClick} />
+                    </div>
                 </ul>
 
 
