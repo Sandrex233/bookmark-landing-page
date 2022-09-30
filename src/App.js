@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import CTA from "./components/CTA";
 import Extension from "./components/Extension";
 import FAQ from "./components/FAQ";
-import Features from "./components/Features";
+import Tab from "./components/Tab";
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
+
+
 
 
 function App() {
@@ -18,7 +20,7 @@ function App() {
     {
       question: 'How can I request a new browser?',
       answer: 'Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.Suspendisse imperdiet.',
-      open: true
+      open: false
     },
     {
       question: 'Is there a mobile app?',
@@ -49,7 +51,7 @@ function App() {
     <div className="font-rubik">
       <Navbar />
       <Hero />
-      <Features />
+      <Tab />
       <Extension />
       <div className="faqs">
         <div className='flex items-center justify-center flex-col'>

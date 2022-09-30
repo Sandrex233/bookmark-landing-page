@@ -8,7 +8,7 @@ const Extension = () => {
     return (
         <div className='max-w-[1000px] mx-auto p-4 mt-32 flex flex-col justify-center w-full h-full'>
             <div className='flex items-center justify-center flex-col'>
-                <h1 className='text-4xl font-bold text-[#252B46] text-center inline'>Download the extension</h1>
+                <h1 className='text-4xl font-medium text-[#252B46] text-center inline'>Download the extension</h1>
                 <p className='max-w-sm md:max-w-lg py-4 font-normal text-gray-400 text-center'>We’ve got more browsers in the pipeline. Please do let us know if you’ve
                     got a favourite you’d like us to prioritize.</p>
             </div>

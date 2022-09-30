@@ -4,6 +4,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 
 .hovered:hover {
     filter: invert(52%) sepia(28%) saturate(5991%) hue-rotate(328deg) brightness(99%) contrast(99%);
@@ -11,11 +17,7 @@
 
 
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+/* FAQ Section */
 
 
 .faqs {
@@ -77,4 +79,82 @@
 .faqs .faq.open .faq-answer {
 	max-height: 1000px;
 	opacity: 1;
+}
+
+
+
+
+/* Features tab Section */
+
+
+
+.tabs {
+  margin-bottom: 40px;
+  padding: 30px;
+  text-align: center;
+  max-width: max-content;
+  color: #656770;
+  cursor: pointer;
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+
+
+@media (max-width: 768px) {
+	 .tabs {
+	  padding: 15px;
+	  margin:auto;
+	 }
+
+	.active-tabs::before {
+	  content: "";
+	  display: block;
+	  position: absolute;
+	  top: 45px;
+	  left: 50%;
+	  transform: translateX(-50%);
+	  width: calc(70% + 2px);
+	  height: 5px;
+	  background: #FA5757;
+	}
+}
+
+
+.tabs:hover {
+	color: #FA5757;
+}
+
+.active-tabs  {
+	background: white;
+	border-bottom: 1px solid transparent;
+	color: #030305;
+
+}
+
+@media (min-width: 768px) {
+	.active-tabs::before {
+	  content: "";
+	  display: block;
+	  position: absolute;
+	  top: 75px;
+	  left: 50%;
+	  transform: translateX(-50%);
+	  width: calc(100% + 2px);
+	  height: 5px;
+	  background: #FA5757;
+	}
+}
+
+
+.content {
+  background: white;
+  padding: 30px;
+  display: none;
+}
+
+
+
+.active-content {
+  display: block;
 }
