@@ -121,8 +121,10 @@
 }
 
 
-.tabs:hover {
-	color: #FA5757;
+@media (min-width: 768px) {
+	.tabs:hover {
+		color: #FA5757;
+	}
 }
 
 .active-tabs  {
@@ -131,6 +133,7 @@
 	color: #030305;
 
 }
+
 
 @media (min-width: 768px) {
 	.active-tabs::before {
